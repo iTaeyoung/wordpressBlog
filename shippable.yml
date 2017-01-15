@@ -13,10 +13,10 @@ integrations:
   hub:
     - integrationName: "dockerhub-integration"
       type: docker
-#  notifications:
-#    - integrationName: "triggerDemoPipeline"
-#      type: webhook
-#      payload:
-#        - versionName=$BRANCH.$BUILD_NUMBER
-#      on_success: always
-#      on_failure: never
+  notifications:
+    - integrationName: "triggerWordpressBlog"
+      type: webhook
+      payload:
+        - versionName=$BRANCH.$BUILD_NUMBER
+      on_success: always
+      on_failure: never
